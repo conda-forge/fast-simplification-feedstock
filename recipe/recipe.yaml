@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: fast-simplification
   version: 0.1.13
+  build_number: 2
 
 package:
   name: ${{ name|lower }}
@@ -13,7 +14,7 @@ source:
   sha256: 5e95c966ad4ddf04b0a49013c92e5a06a3b888c6e02bb3c7ab3817fc8ba0f03f
 
 build:
-  number: 1
+  number: ${{ build_number }}
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:

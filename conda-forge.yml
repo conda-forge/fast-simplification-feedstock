@@ -9,3 +9,9 @@ conda_forge_output_validation: true
 bot:
   automerge: true
   inspection: update-all
+build_platform:
+  linux_aarch64: linux_aarch64
+  osx_arm64: osx_arm64
+provider:
+  linux_aarch64: default
+  osx_arm64: default
