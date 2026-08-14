@@ -29,7 +29,7 @@ requirements:
     - scikit-build-core >=0.10
     # Dependencies.
     - pip
-    - python ${{ python_min }}.*
+    - python
   run:
     - numpy
 tests:
@@ -37,9 +37,6 @@ tests:
       imports:
         - fast_simplification
       pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - "*"
   - script:
       - pytest ./tests/
     files:
