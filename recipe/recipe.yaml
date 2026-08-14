@@ -10,8 +10,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace("-", "_")|lower }}-${{ version }}.tar.gz
-  sha256: ed02ea6f4968ec98f963f2d3665dbafd0297ec12aea9e4d0a87c4b3c14d608a8
+  url: https://github.com/pyvista/fast-simplification/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: ae381e7876a9ed6e33c394b8bb500fc215bff52f90b484e4b2ddef5736d94785
 
 build:
   number: ${{ build_number }}
