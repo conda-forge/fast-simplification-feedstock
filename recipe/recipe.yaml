@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: fast-simplification
-  version: 0.1.13
-  build_number: 2
+  version: 0.2.0
+  build_number: 0
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name|replace("-", "_")|lower }}-${{ version }}.tar.gz
-  sha256: 5e95c966ad4ddf04b0a49013c92e5a06a3b888c6e02bb3c7ab3817fc8ba0f03f
+  sha256: ed02ea6f4968ec98f963f2d3665dbafd0297ec12aea9e4d0a87c4b3c14d608a8
 
 build:
   number: ${{ build_number }}
@@ -31,7 +31,7 @@ requirements:
     - wheel >=0.37.0
   run:
     - python
-
+    - numpy
 tests:
   - python:
       imports:
