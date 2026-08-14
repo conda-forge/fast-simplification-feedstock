@@ -23,20 +23,23 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
   host:
-    - cython >=3.0.0
-    - numpy
+    # Build system.
+    - nanobind >=1.3.2
+    - setuptools-scm >=8
+    - scikit-build-core >=0.10
+    # Dependencies.
     - pip
-    - python
-    - setuptools >=45.0
-    - wheel >=0.37.0
+    - python ${{ python_min }}.*
   run:
-    - python
     - numpy
 tests:
   - python:
       imports:
         - fast_simplification
       pip_check: true
+      python_versions:
+        - ${{ python_min }}.*
+        - "*"
   - script:
       - pytest ./tests/
     files:
