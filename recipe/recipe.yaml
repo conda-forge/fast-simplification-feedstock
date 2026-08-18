@@ -44,6 +44,8 @@ tests:
         - fast_simplification
       pip_check: true
   - script:
+      - python -c "from importlib.metadata import version; v = version('fast_simplification'); assert v != '0.0.0', v"
+  - script:
       - pytest ./tests/
     files:
       source:
